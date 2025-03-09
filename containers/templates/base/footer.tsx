@@ -70,7 +70,7 @@ const MobileMenu = () => {
     <section
       ref={sectionRef}
       className={cn(
-        'absolute right-0 flex flex-col z-20 pb-24 top-0 h-full w-60 px-6 bg-gray-900 lg:hidden transition-all duration-300',
+        'absolute right-0 flex flex-col z-20 pb-24 top-0 h-full w-60 px-6 bg-gray-900 backdrop-blur-sm lg:hidden transition-all duration-300',
         {
           'translate-x-0': toggleUrlState.isShow,
           'translate-x-60': !toggleUrlState.isShow,
@@ -136,10 +136,10 @@ const MobileMenuCategories = () => {
     },
   ]);
   const handleCollapse = (
-    value: 'categories' | 'sections' | 'movie-genres' | 'serial-genres',
+    e: 'categories' | 'sections' | 'movie-genres' | 'serial-genres',
   ) => {
     const updatedList = collapseList.map((item) => {
-      if (item.key === value) {
+      if (item.key === e) {
         return {
           ...item,
           isCollapsed: !item.isCollapsed,
@@ -193,18 +193,16 @@ const MobileMenuCategories = () => {
           {/* body */}
           <div className={cn(collapseList[1].isCollapsed ? 'block' : 'hidden')}>
             {[
-              {
-                href: '#',
-                text: 'لینک اول',
-              },
-              {
-                href: '#',
-                text: 'لینک دوم',
-              },
-              {
-                href: '#',
-                text: 'لینک سوم',
-              },
+              { href: '/', text: 'لینک اول' },
+              { href: '/', text: 'لینک دوم' },
+              { href: '/', text: 'لینک سوم' },
+              { href: '/', text: 'لینک چهارم' },
+              { href: '/', text: 'لینک پنجم' },
+              { href: '/', text: 'لینک ششم' },
+              { href: '/', text: 'لینک هفتم' },
+              { href: '/', text: 'لینک هشتم' },
+              { href: '/', text: 'لینک نهم' },
+              { href: '/', text: 'لینک دهم' },
             ].map((item) => (
               <Link
                 key={item.text}
@@ -238,18 +236,16 @@ const MobileMenuCategories = () => {
           {/* body */}
           <div className={cn(collapseList[2].isCollapsed ? 'block' : 'hidden')}>
             {[
-              {
-                href: '#',
-                text: 'لینک اول',
-              },
-              {
-                href: '#',
-                text: 'لینک دوم',
-              },
-              {
-                href: '#',
-                text: 'لینک سوم',
-              },
+              { href: '/', text: 'لینک اول' },
+              { href: '/', text: 'لینک دوم' },
+              { href: '/', text: 'لینک سوم' },
+              { href: '/', text: 'لینک چهارم' },
+              { href: '/', text: 'لینک پنجم' },
+              { href: '/', text: 'لینک ششم' },
+              { href: '/', text: 'لینک هفتم' },
+              { href: '/', text: 'لینک هشتم' },
+              { href: '/', text: 'لینک نهم' },
+              { href: '/', text: 'لینک دهم' },
             ].map((item) => (
               <Link
                 key={item.text}
@@ -283,18 +279,16 @@ const MobileMenuCategories = () => {
           {/* body */}
           <div className={cn(collapseList[3].isCollapsed ? 'block' : 'hidden')}>
             {[
-              {
-                href: '#',
-                text: 'لینک اول',
-              },
-              {
-                href: '#',
-                text: 'لینک دوم',
-              },
-              {
-                href: '#',
-                text: 'لینک سوم',
-              },
+              { href: '/', text: 'لینک اول' },
+              { href: '/', text: 'لینک دوم' },
+              { href: '/', text: 'لینک سوم' },
+              { href: '/', text: 'لینک چهارم' },
+              { href: '/', text: 'لینک پنجم' },
+              { href: '/', text: 'لینک ششم' },
+              { href: '/', text: 'لینک هفتم' },
+              { href: '/', text: 'لینک هشتم' },
+              { href: '/', text: 'لینک نهم' },
+              { href: '/', text: 'لینک دهم' },
             ].map((item) => (
               <Link
                 key={item.text}

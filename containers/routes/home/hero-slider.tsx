@@ -13,14 +13,14 @@ export function HeroSlider() {
   const swiperRef = useRef<any>(null);
   const [activedIndex, setActivedIndex] = useState(0);
   const [activedIndexData, setActivedIndexData] = useState(HeroSliderData[0]);
-  const handleSlideChange = (swiper: any) => {
-    const newIndex = swiper.realIndex;
+  const handleSlideChange = (e: any) => {
+    const newIndex = e.realIndex;
     setActivedIndex(newIndex);
     setActivedIndexData(HeroSliderData[newIndex]);
   };
-  const handleClickImage = (index: number) => {
+  const handleClickImage = (e: number) => {
     if (swiperRef.current) {
-      swiperRef.current.slideToLoop(index);
+      swiperRef.current.slideToLoop(e);
     }
   };
 

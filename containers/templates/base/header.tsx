@@ -1,8 +1,9 @@
 'use client';
 
-import { Category, Crown, SearchNormal1 } from 'iconsax-react';
+import { Category, CloseSquare, Crown, SearchNormal1 } from 'iconsax-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { RefObject, useRef, useState } from 'react';
 import { useOnClickOutside } from 'usehooks-ts';
 import { useToggleUrlState } from '@/hooks/toggle-url-state';
@@ -47,12 +48,10 @@ export function Header() {
         </div>
       </div>
       <div className="flex items-center gap-4">
-        <button className="flex size-11 items-center justify-center rounded-xl bg-gray-800/50 transition-all hover:bg-gray-900">
-          <SearchNormal1 size={24} color="#fff" />
-        </button>
+        <Search />
         <Link
           href="#"
-          className="flex h-11 items-center justify-center gap-2 rounded-xl bg-gray-800/50 px-2 transition-all hover:bg-gray-900"
+          className="flex h-11 items-center justify-center gap-2 rounded-xl bg-gray-800/50 px-2 backdrop-blur-sm transition-all hover:bg-gray-900"
         >
           <Crown size={28} color="#F5C518" variant="Bold" />
 
@@ -69,6 +68,71 @@ export function Header() {
   );
 }
 
+const Search = () => {
+  const toggleUrlState = useToggleUrlState('search');
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const [searchValue, setSearchValue] = useState('');
+  const router = useRouter();
+  useOnClickOutside(sectionRef as RefObject<HTMLElement>, () => {
+    toggleUrlState.hide();
+    setSearchValue('');
+  });
+
+  return (
+    <div ref={sectionRef} className="relative">
+      {/* btn */}
+      <button
+        onClick={() => toggleUrlState.show()}
+        className={cn(
+          'flex size-11 z-20 relative items-center justify-center rounded-xl bg-gray-800/50 transition-all hover:bg-gray-900',
+          {
+            hidden: toggleUrlState.isShow,
+          },
+        )}
+      >
+        <SearchNormal1 size={24} color="#fff" />
+      </button>
+      <div
+        className={cn(
+          'absolute flex gap-1 -bottom-5 backdrop-blur-sm left-0 z-10 h-11 bg-gray-800/50 rounded-xl p-2',
+          {
+            'bottom-0 hidden': !toggleUrlState.isShow,
+            '-bottom-5 w-60': toggleUrlState.isShow,
+          },
+        )}
+      >
+        {/* search */}
+        <button
+          onClick={() => {
+            router.push(`/explore?text=${searchValue}`);
+          }}
+        >
+          <SearchNormal1 size={24} color="#fff" />
+        </button>
+        {/* input */}
+        <input
+          value={searchValue}
+          onChange={(e) => setSearchValue(e.target.value)}
+          type="text"
+          className="size-full bg-transparent text-smp text-white/70 outline-none"
+          placeholder="جستجو"
+        />
+        {/* close */}
+        <button
+          onClick={() => {
+            toggleUrlState.hide();
+          }}
+        >
+          <CloseSquare
+            size="28"
+            className="absolute -right-8 top-2 stroke-white transition-all hover:stroke-pink"
+          />
+        </button>
+      </div>
+    </div>
+  );
+};
+
 const DesktopCategories = () => {
   const toggleUrlState = useToggleUrlState('desktop-categories');
   const sectionRef = useRef<HTMLDivElement | null>(null);
@@ -82,46 +146,46 @@ const DesktopCategories = () => {
     {
       key: 'sections',
       data: [
-        { href: '#', text: 'لینک اول' },
-        { href: '#', text: 'لینک دوم' },
-        { href: '#', text: 'لینک سوم' },
-        { href: '#', text: 'لینک چهارم' },
-        { href: '#', text: 'لینک پنجم' },
-        { href: '#', text: 'لینک ششم' },
-        { href: '#', text: 'لینک هفتم' },
-        { href: '#', text: 'لینک هشتم' },
-        { href: '#', text: 'لینک نهم' },
-        { href: '#', text: 'لینک دهم' },
+        { href: '/', text: 'لینک اول' },
+        { href: '/', text: 'لینک دوم' },
+        { href: '/', text: 'لینک سوم' },
+        { href: '/', text: 'لینک چهارم' },
+        { href: '/', text: 'لینک پنجم' },
+        { href: '/', text: 'لینک ششم' },
+        { href: '/', text: 'لینک هفتم' },
+        { href: '/', text: 'لینک هشتم' },
+        { href: '/', text: 'لینک نهم' },
+        { href: '/', text: 'لینک دهم' },
       ],
     },
     {
       key: 'movie-genres',
       data: [
-        { href: '#', text: 'لینک دهم' },
-        { href: '#', text: 'لینک نهم' },
-        { href: '#', text: 'لینک هشتم' },
-        { href: '#', text: 'لینک هفتم' },
-        { href: '#', text: 'لینک ششم' },
-        { href: '#', text: 'لینک پنجم' },
-        { href: '#', text: 'لینک چهارم' },
-        { href: '#', text: 'لینک سوم' },
-        { href: '#', text: 'لینک دوم' },
-        { href: '#', text: 'لینک اول' },
+        { href: '/', text: 'لینک دهم' },
+        { href: '/', text: 'لینک نهم' },
+        { href: '/', text: 'لینک هشتم' },
+        { href: '/', text: 'لینک هفتم' },
+        { href: '/', text: 'لینک ششم' },
+        { href: '/', text: 'لینک پنجم' },
+        { href: '/', text: 'لینک چهارم' },
+        { href: '/', text: 'لینک سوم' },
+        { href: '/', text: 'لینک دوم' },
+        { href: '/', text: 'لینک اول' },
       ],
     },
     {
       key: 'serial-genres',
       data: [
-        { href: '#', text: 'لینک اول' },
-        { href: '#', text: 'لینک دوم' },
-        { href: '#', text: 'لینک سوم' },
-        { href: '#', text: 'لینک چهارم' },
-        { href: '#', text: 'لینک پنجم' },
-        { href: '#', text: 'لینک ششم' },
-        { href: '#', text: 'لینک هفتم' },
-        { href: '#', text: 'لینک هشتم' },
-        { href: '#', text: 'لینک نهم' },
-        { href: '#', text: 'لینک دهم' },
+        { href: '/', text: 'لینک اول' },
+        { href: '/', text: 'لینک دوم' },
+        { href: '/', text: 'لینک سوم' },
+        { href: '/', text: 'لینک چهارم' },
+        { href: '/', text: 'لینک پنجم' },
+        { href: '/', text: 'لینک ششم' },
+        { href: '/', text: 'لینک هفتم' },
+        { href: '/', text: 'لینک هشتم' },
+        { href: '/', text: 'لینک نهم' },
+        { href: '/', text: 'لینک دهم' },
       ],
     },
   ];

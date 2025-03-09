@@ -1,11 +1,11 @@
-type THeroSlider = {
+type THeroSliderData = {
   title: string;
   imdb: number;
   description: string;
   href: string;
 }[];
 
-export const HeroSliderData: THeroSlider = [
+export const HeroSliderData: THeroSliderData = [
   {
     title: 'Reacher',
     imdb: 8.1,

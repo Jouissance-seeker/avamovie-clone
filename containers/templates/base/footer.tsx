@@ -23,7 +23,7 @@ export function Footer() {
 
 const MobileNavBottom = () => {
   return (
-    <section className="fixed bottom-0 z-20 flex w-full justify-around bg-black/80 py-3 lg:hidden">
+    <section className="fixed bottom-0 z-20 flex w-full justify-around bg-black/80 py-3 backdrop-blur-sm lg:hidden">
       {[
         {
           href: '/',
@@ -196,13 +196,6 @@ const MobileMenuCategories = () => {
               { href: '/', text: 'لینک اول' },
               { href: '/', text: 'لینک دوم' },
               { href: '/', text: 'لینک سوم' },
-              { href: '/', text: 'لینک چهارم' },
-              { href: '/', text: 'لینک پنجم' },
-              { href: '/', text: 'لینک ششم' },
-              { href: '/', text: 'لینک هفتم' },
-              { href: '/', text: 'لینک هشتم' },
-              { href: '/', text: 'لینک نهم' },
-              { href: '/', text: 'لینک دهم' },
             ].map((item) => (
               <Link
                 key={item.text}
@@ -239,13 +232,6 @@ const MobileMenuCategories = () => {
               { href: '/', text: 'لینک اول' },
               { href: '/', text: 'لینک دوم' },
               { href: '/', text: 'لینک سوم' },
-              { href: '/', text: 'لینک چهارم' },
-              { href: '/', text: 'لینک پنجم' },
-              { href: '/', text: 'لینک ششم' },
-              { href: '/', text: 'لینک هفتم' },
-              { href: '/', text: 'لینک هشتم' },
-              { href: '/', text: 'لینک نهم' },
-              { href: '/', text: 'لینک دهم' },
             ].map((item) => (
               <Link
                 key={item.text}
@@ -282,13 +268,6 @@ const MobileMenuCategories = () => {
               { href: '/', text: 'لینک اول' },
               { href: '/', text: 'لینک دوم' },
               { href: '/', text: 'لینک سوم' },
-              { href: '/', text: 'لینک چهارم' },
-              { href: '/', text: 'لینک پنجم' },
-              { href: '/', text: 'لینک ششم' },
-              { href: '/', text: 'لینک هفتم' },
-              { href: '/', text: 'لینک هشتم' },
-              { href: '/', text: 'لینک نهم' },
-              { href: '/', text: 'لینک دهم' },
             ].map((item) => (
               <Link
                 key={item.text}

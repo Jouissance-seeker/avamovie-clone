@@ -11,7 +11,7 @@ import { cn } from '@/utils/cn';
 
 export function Header() {
   return (
-    <header className="container fixed left-1/2 top-0 z-20 my-6 flex -translate-x-1/2 items-center justify-between">
+    <header className="container absolute left-1/2 top-0 z-20 my-6 flex -translate-x-1/2 items-center justify-between">
       <div className="flex items-center gap-4">
         <Link href="#">
           <Image src="/images/logo.png" width={150} height={150} alt="لوگو" />
@@ -149,25 +149,11 @@ const DesktopCategories = () => {
         { href: '/', text: 'لینک اول' },
         { href: '/', text: 'لینک دوم' },
         { href: '/', text: 'لینک سوم' },
-        { href: '/', text: 'لینک چهارم' },
-        { href: '/', text: 'لینک پنجم' },
-        { href: '/', text: 'لینک ششم' },
-        { href: '/', text: 'لینک هفتم' },
-        { href: '/', text: 'لینک هشتم' },
-        { href: '/', text: 'لینک نهم' },
-        { href: '/', text: 'لینک دهم' },
       ],
     },
     {
       key: 'movie-genres',
       data: [
-        { href: '/', text: 'لینک دهم' },
-        { href: '/', text: 'لینک نهم' },
-        { href: '/', text: 'لینک هشتم' },
-        { href: '/', text: 'لینک هفتم' },
-        { href: '/', text: 'لینک ششم' },
-        { href: '/', text: 'لینک پنجم' },
-        { href: '/', text: 'لینک چهارم' },
         { href: '/', text: 'لینک سوم' },
         { href: '/', text: 'لینک دوم' },
         { href: '/', text: 'لینک اول' },
@@ -179,13 +165,6 @@ const DesktopCategories = () => {
         { href: '/', text: 'لینک اول' },
         { href: '/', text: 'لینک دوم' },
         { href: '/', text: 'لینک سوم' },
-        { href: '/', text: 'لینک چهارم' },
-        { href: '/', text: 'لینک پنجم' },
-        { href: '/', text: 'لینک ششم' },
-        { href: '/', text: 'لینک هفتم' },
-        { href: '/', text: 'لینک هشتم' },
-        { href: '/', text: 'لینک نهم' },
-        { href: '/', text: 'لینک دهم' },
       ],
     },
   ];

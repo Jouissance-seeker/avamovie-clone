@@ -11,12 +11,12 @@ export function Header() {
         <Image src="/images/logo.png" width={150} height={150} alt="لوگو" />
       </Link>
       <div className="flex items-center gap-4">
-        <button className="flex size-11 items-center justify-center rounded-xl bg-gray-800/30">
+        <button className="flex size-11 items-center justify-center rounded-xl bg-gray-800/80 transition-all hover:bg-gray-900">
           <SearchNormal1 size={24} color="#fff" />
         </button>
         <Link
           href="#"
-          className="flex size-11 items-center justify-center rounded-xl bg-gray-800/30"
+          className="flex size-11 items-center justify-center rounded-xl bg-gray-800/80 transition-all hover:bg-gray-900"
         >
           <Crown size={28} color="#F5C518" variant="Bold" />
         </Link>

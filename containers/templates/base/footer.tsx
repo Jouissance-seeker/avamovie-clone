@@ -205,21 +205,13 @@ const MobileMenuCategories = () => {
                 href: '#',
                 text: 'لینک سوم',
               },
-              {
-                href: '#',
-                text: 'لینک چهارم',
-              },
-              {
-                href: '#',
-                text: 'لینک پنجم',
-              },
             ].map((item) => (
               <Link
                 key={item.text}
                 href="#"
                 className="relative flex rounded-lg bg-black py-2 pr-4 text-xsp transition-all after:absolute after:right-1.5 after:top-1.5 after:h-5 after:w-0.5 after:bg-pink hover:text-pink"
               >
-                لینک اول
+                {item.text}
               </Link>
             ))}
           </div>
@@ -258,21 +250,13 @@ const MobileMenuCategories = () => {
                 href: '#',
                 text: 'لینک سوم',
               },
-              {
-                href: '#',
-                text: 'لینک چهارم',
-              },
-              {
-                href: '#',
-                text: 'لینک پنجم',
-              },
             ].map((item) => (
               <Link
                 key={item.text}
                 href="#"
                 className="relative flex rounded-lg bg-black py-2 pr-4 text-xsp transition-all after:absolute after:right-1.5 after:top-1.5 after:h-5 after:w-0.5 after:bg-pink hover:text-pink"
               >
-                لینک اول
+                {item.text}
               </Link>
             ))}
           </div>
@@ -311,21 +295,13 @@ const MobileMenuCategories = () => {
                 href: '#',
                 text: 'لینک سوم',
               },
-              {
-                href: '#',
-                text: 'لینک چهارم',
-              },
-              {
-                href: '#',
-                text: 'لینک پنجم',
-              },
             ].map((item) => (
               <Link
                 key={item.text}
                 href="#"
                 className="relative flex rounded-lg bg-black py-2 pr-4 text-xsp transition-all after:absolute after:right-1.5 after:top-1.5 after:h-5 after:w-0.5 after:bg-pink hover:text-pink"
               >
-                لینک اول
+                {item.text}
               </Link>
             ))}
           </div>

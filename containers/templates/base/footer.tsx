@@ -23,7 +23,7 @@ export function Footer() {
 
 const MobileNavBottom = () => {
   return (
-    <section className="fixed bottom-0 flex w-full justify-around bg-black/70 py-3 backdrop-blur-sm lg:hidden">
+    <section className="fixed bottom-0 flex w-full justify-around bg-black/70 py-3 lg:hidden">
       {[
         {
           href: '/',
@@ -84,7 +84,7 @@ const MobileMenu = () => {
           alt="logo"
           width={150}
           height={150}
-          className="mx-auto my-7"
+          className="mx-auto my-6"
         />
       </Link>
       <div className="flex flex-col gap-3">

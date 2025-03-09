@@ -23,7 +23,7 @@ export function Footer() {
 
 const MobileNavBottom = () => {
   return (
-    <section className="fixed bottom-0 flex w-full justify-around bg-black/70 py-3 lg:hidden">
+    <section className="fixed bottom-0 z-20 flex w-full justify-around bg-black/80 py-3 lg:hidden">
       {[
         {
           href: '/',
@@ -70,14 +70,13 @@ const MobileMenu = () => {
     <section
       ref={sectionRef}
       className={cn(
-        'absolute right-0 flex flex-col pb-24 top-0 h-full w-60 px-6 bg-gray-900 lg:hidden transition-all duration-300',
+        'absolute right-0 flex flex-col z-20 pb-24 top-0 h-full w-60 px-6 bg-gray-900 lg:hidden transition-all duration-300',
         {
           'translate-x-0': toggleUrlState.isShow,
           'translate-x-60': !toggleUrlState.isShow,
         },
       )}
     >
-      {/* logo */}
       <Link href="#">
         <Image
           src="/images/logo.png"

@@ -25,7 +25,7 @@ export default {
       },
       colors: {
         pink: {
-          DEFAULT: '#FF5990',
+          DEFAULT: '#dd3268',
         },
       },
     },

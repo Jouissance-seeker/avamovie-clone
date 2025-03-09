@@ -24,7 +24,7 @@ export default {
         xsp: '13px',
       },
       colors: {
-        purple: {
+        pink: {
           DEFAULT: '#FF5990',
         },
       },

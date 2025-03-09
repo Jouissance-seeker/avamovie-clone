@@ -1,6 +1,7 @@
 'use client';
 
 import { AppProgressBar } from 'next-nprogress-bar';
+import { NuqsAdapter } from 'nuqs/adapters/next/app';
 import type { ReactNode } from 'react';
 import { Suspense } from 'react';
 
@@ -19,11 +20,17 @@ const ProgressBar = () => {
   );
 };
 
-export default function Providers({ children }: IProps) {
+const Nuqs = (props: IProps) => {
+  return <NuqsAdapter>{props.children}</NuqsAdapter>;
+};
+
+export default function Providers(props: IProps) {
   return (
     <>
       <ProgressBar />
-      <Suspense>{children}</Suspense>
+      <Nuqs>
+        <Suspense>{props.children}</Suspense>
+      </Nuqs>
     </>
   );
 }

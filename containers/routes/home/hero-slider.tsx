@@ -44,7 +44,12 @@ export function HeroSlider() {
             </span>
             <span>/10</span>
           </span>
-          <Image src="/images/imdb.png" alt="imdb" width={40} height={40} />
+          <Image
+            src="/images/imdb-rate.png"
+            alt="imdb"
+            width={40}
+            height={40}
+          />
         </div>
         <p className="max-w-[700px] text-sm text-white/80">
           {activedIndexData.description}

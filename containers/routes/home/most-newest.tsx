@@ -55,14 +55,24 @@ const Card = (props: ICardProps) => {
               <span className="font-medium">{props.data.imdbRate}</span>
               <span>/10</span>
             </span>
-            <Image src="/images/imdb.png" alt="imdb" width={25} height={20} />
+            <Image
+              src="/images/ava-movie-rate.png"
+              alt="imdb"
+              width={25}
+              height={20}
+            />
           </div>
           <div className="flex items-center gap-1.5 text-sm">
             <span className="pt-1 text-gray-300">
               <span className="font-medium">{props.data.imdbRate}</span>
               <span>/10</span>
             </span>
-            <Image src="/images/imdb.png" alt="imdb" width={25} height={20} />
+            <Image
+              src="/images/imdb-rate.png"
+              alt="imdb"
+              width={25}
+              height={20}
+            />
           </div>
         </div>
         <div className="absolute right-1.5 top-1.5 flex gap-1.5">

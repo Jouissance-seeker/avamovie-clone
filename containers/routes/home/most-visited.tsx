@@ -1,17 +1,17 @@
-import { Calendar, Microphone2, Subtitle } from 'iconsax-react';
+import { Eye, Microphone2, Subtitle } from 'iconsax-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { mostNewestData } from '@/resources/most-newest';
 import { cn } from '@/utils/cn';
 
-export function MostNewest() {
+export function MostVisited() {
   return (
     <section className="container flex flex-col gap-4">
       {/* head */}
       <div className="flex justify-between">
         <div className="flex gap-3">
-          <Calendar size={30} color="#fff" variant="TwoTone" />
-          <p className="text-lg font-bold">جدیدترین ها</p>
+          <Eye size={30} color="#fff" variant="TwoTone" />
+          <p className="text-lg font-bold">پربازدید ترین ها</p>
         </div>
         <Link
           href="/"

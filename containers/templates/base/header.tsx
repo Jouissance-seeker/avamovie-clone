@@ -114,7 +114,7 @@ const Search = () => {
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
           type="text"
-          className="size-full bg-transparent text-smp text-white/70 outline-none"
+          className="size-full bg-transparent text-smp text-white/70 outline-none placeholder:text-sm"
           placeholder="جستجو"
         />
         {/* close */}

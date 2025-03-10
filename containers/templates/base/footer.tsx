@@ -8,7 +8,7 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 import { RefObject, useRef, useState } from 'react';
-import { useOnClickOutside } from 'usehooks-ts';
+import { useOnClickOutside, useScrollLock } from 'usehooks-ts';
 import { useToggleUrlState } from '@/hooks/toggle-url-state';
 import { cn } from '@/utils/cn';
 
@@ -22,8 +22,10 @@ export function Footer() {
 }
 
 const MobileNavBottom = () => {
+  const lockScrollbar = useScrollLock();
+
   return (
-    <section className="fixed bottom-0 z-20 flex w-full justify-around bg-black/80 py-3 backdrop-blur-sm lg:hidden">
+    <section className="fixed bottom-0 z-20 flex w-full justify-around bg-black/80 px-7 py-3 backdrop-blur-sm lg:hidden">
       {[
         {
           href: '/',
@@ -32,6 +34,9 @@ const MobileNavBottom = () => {
         },
         {
           href: '/?toggle-mobile-menu=true',
+          onClick: () => {
+            lockScrollbar.lock();
+          },
           icon: Category,
           text: 'منو',
         },
@@ -49,6 +54,7 @@ const MobileNavBottom = () => {
         <Link
           key={item.text}
           href={item.href}
+          onClick={item.onClick}
           className="flex flex-col items-center gap-2 stroke-white hover:stroke-pink hover:text-pink"
         >
           <item.icon size={22} />
@@ -62,44 +68,57 @@ const MobileNavBottom = () => {
 const MobileMenu = () => {
   const toggleUrlState = useToggleUrlState('mobile-menu');
   const sectionRef = useRef<HTMLDivElement | null>(null);
+  const lockScrollbar = useScrollLock();
   useOnClickOutside(sectionRef as RefObject<HTMLElement>, () => {
     toggleUrlState.hide();
+    lockScrollbar.unlock();
   });
 
   return (
-    <section
-      ref={sectionRef}
-      className={cn(
-        'absolute right-0 flex flex-col z-20 pb-24 top-0 h-full w-60 px-6 bg-gray-900 backdrop-blur-sm lg:hidden transition-all duration-300',
-        {
-          'translate-x-0': toggleUrlState.isShow,
-          'translate-x-60': !toggleUrlState.isShow,
-        },
-      )}
-    >
-      <Link href="#">
-        <Image
-          src="/images/logo.png"
-          alt="logo"
-          width={150}
-          height={150}
-          className="mx-auto my-6"
-        />
-      </Link>
-      <div className="flex flex-col gap-3">
-        {/* categories */}
-        <MobileMenuCategories />
-        {/* links */}
+    <section>
+      <div
+        className={cn(
+          'fixed top-0 left-0 w-full h-full bg-black/10 z-10 backdrop-blur-sm transition-all duration-300',
+          {
+            'opacity-100': toggleUrlState.isShow,
+            'opacity-0 pointer-events-none': !toggleUrlState.isShow,
+          },
+        )}
+      />
+      <div
+        ref={sectionRef}
+        className={cn(
+          'absolute right-0 flex flex-col z-20 pb-24 top-0 h-full w-60 px-6 bg-gray-900 backdrop-blur-sm lg:hidden transition-all duration-300',
+          {
+            'translate-x-0': toggleUrlState.isShow,
+            'translate-x-60': !toggleUrlState.isShow,
+          },
+        )}
+      >
+        <Link href="#">
+          <Image
+            src="/images/logo.png"
+            alt="logo"
+            width={150}
+            height={150}
+            className="mx-auto my-6"
+          />
+        </Link>
         <div className="flex flex-col gap-3">
-          <Link href="#" className="flex rounded-lg bg-black p-3.5 text-xsp">
-            فیلم ها
-          </Link>
-          <Link href="#" className="flex rounded-lg bg-black p-3.5 text-xsp">
-            سریال ها
-          </Link>
-          <Link href="#" className="flex rounded-lg bg-black p-3.5 text-xsp">
-            هنرمندان
-          </Link>
+          {/* categories */}
+          <MobileMenuCategories />
+          {/* links */}
+          <div className="flex flex-col gap-3">
+            <Link href="#" className="flex rounded-lg bg-black p-3.5 text-xsp">
+              فیلم ها
+            </Link>
+            <Link href="#" className="flex rounded-lg bg-black p-3.5 text-xsp">
+              سریال ها
+            </Link>
+            <Link href="#" className="flex rounded-lg bg-black p-3.5 text-xsp">
+              هنرمندان
+            </Link>
+          </div>
         </div>
       </div>
     </section>

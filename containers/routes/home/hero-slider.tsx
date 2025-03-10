@@ -39,7 +39,9 @@ export function HeroSlider() {
         <div className="h-[1px] w-14 !bg-pink" />
         <div className="flex items-center gap-2">
           <span>
-            <span className="text-lg font-medium">{activedIndexData.imdb}</span>
+            <span className="text-lg font-medium">
+              {activedIndexData.imdbRate}
+            </span>
             <span>/10</span>
           </span>
           <Image src="/images/imdb.png" alt="imdb" width={40} height={40} />
@@ -65,7 +67,7 @@ export function HeroSlider() {
           onSlideChangeTransitionEnd={handleSlideChange}
           modules={[Autoplay]}
           loop
-          className="container mb-1 w-fit"
+          className="container mb-2.5 w-fit"
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
@@ -76,7 +78,7 @@ export function HeroSlider() {
               <button
                 onClick={() => handleClickImage(index)}
                 className={cn(
-                  'rounded-xl relative overflow-hidden border transition-all duration-300',
+                  'rounded-xl flex flex-col relative overflow-hidden border transition-all duration-300',
                   {
                     'border-pink': activedIndex === index,
                     'border-transparent': activedIndex !== index,

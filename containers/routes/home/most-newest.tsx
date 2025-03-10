@@ -1,7 +1,8 @@
-import { Calendar } from 'iconsax-react';
+import { Calendar, Microphone2, Subtitle } from 'iconsax-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { mostControversialData } from '@/resources/most-controversial';
+import { mostNewestData } from '@/resources/most-newest';
+import { cn } from '@/utils/cn';
 
 export function MostNewest() {
   return (
@@ -13,7 +14,7 @@ export function MostNewest() {
       </div>
       {/* body */}
       <div className=" flex snap-x gap-4 overflow-x-auto scrollbar-hide">
-        {mostControversialData.map((item) => (
+        {mostNewestData.map((item) => (
           <Card data={item} key={item.title} />
         ))}
       </div>
@@ -22,25 +23,71 @@ export function MostNewest() {
 }
 
 interface ICardProps {
-  data: (typeof mostControversialData)[0];
+  data: (typeof mostNewestData)[0];
 }
 
 const Card = (props: ICardProps) => {
   return (
     <Link
-      href={props.data.href}
+      href="#"
       key={props.data.title}
-      className="flex h-fit snap-center flex-col gap-3 rounded-2xl bg-gray-900/80 px-4 pb-2 pt-4 transition-all hover:bg-gray-900"
+      className="group flex h-fit snap-center flex-col gap-3 rounded-2xl bg-gray-900/80 px-4 pb-2 pt-4 transition-all hover:bg-gray-900"
     >
-      <Image
-        className="size-[150px] min-w-[150px] rounded-xl object-cover"
-        src={props.data.image}
-        alt={props.data.title}
-        width={150}
-        height={150}
-      />
-      <p className="text-center text-sm text-white/90">{props.data.title}</p>
-      <p className="text-center text-xsp text-gray-500">{props.data.year}</p>
+      <div className="relative flex flex-col items-end gap-1">
+        <Image
+          className="h-[160px] w-[280px] min-w-[280px] rounded-xl object-cover brightness-90 transition-all group-hover:brightness-50"
+          src={props.data.image}
+          alt={props.data.title}
+          width={260}
+          height={160}
+        />
+        <p className="mt-2 line-clamp-1 text-smp font-medium text-white/90">
+          {props.data.title}
+        </p>
+        <div className="pointer-events-none absolute top-[45px] flex w-full items-center opacity-0 transition-all group-hover:opacity-100">
+          <p className="absolute flex h-full w-[260px] px-3 text-xs font-medium text-white/90">
+            {props.data.description}
+          </p>
+        </div>
+        <div className="flex gap-3">
+          <div className="flex items-center gap-1.5 text-sm">
+            <span className="pt-1 text-gray-300">
+              <span className="font-medium">{props.data.imdbRate}</span>
+              <span>/10</span>
+            </span>
+            <Image src="/images/imdb.png" alt="imdb" width={25} height={20} />
+          </div>
+          <div className="flex items-center gap-1.5 text-sm">
+            <span className="pt-1 text-gray-300">
+              <span className="font-medium">{props.data.imdbRate}</span>
+              <span>/10</span>
+            </span>
+            <Image src="/images/imdb.png" alt="imdb" width={25} height={20} />
+          </div>
+        </div>
+        <div className="absolute right-1.5 top-1.5 flex gap-1.5">
+          <div
+            className={cn(
+              'size-[24px] rounded-full flex justify-center items-center bg-gray-800/80',
+              {
+                hidden: !props.data.isSubtitle,
+              },
+            )}
+          >
+            <Subtitle size={14} color="#ffffff" variant="Bold" />
+          </div>
+          <div
+            className={cn(
+              'size-[24px] rounded-full flex justify-center items-center bg-gray-800/80',
+              {
+                hidden: !props.data.isDubbed,
+              },
+            )}
+          >
+            <Microphone2 size={16} color="#ffffff" variant="Bold" />
+          </div>
+        </div>
+      </div>
     </Link>
   );
 };

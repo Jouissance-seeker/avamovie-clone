@@ -74,7 +74,7 @@ export function HeroSlider() {
           }}
         >
           {HeroSliderData.map((item, index) => (
-            <SwiperSlide key={item.title} className="!w-[180px] rounded-lg">
+            <SwiperSlide key={item.id} className="!w-[180px] rounded-lg">
               <button
                 onClick={() => handleClickImage(index)}
                 className={cn(

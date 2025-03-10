@@ -13,9 +13,9 @@ export function MostNewest() {
         <p className="text-lg font-bold">جدیدترین ها</p>
       </div>
       {/* body */}
-      <div className=" flex snap-x gap-4 overflow-x-auto scrollbar-hide">
+      <div className=" flex snap-x gap-4 overflow-x-auto scrollbar-hide lg:grid lg:snap-none lg:grid-cols-4 lg:justify-between">
         {mostNewestData.map((item) => (
-          <Card data={item} key={item.title} />
+          <Card data={item} key={item.id} />
         ))}
       </div>
     </section>
@@ -30,12 +30,12 @@ const Card = (props: ICardProps) => {
   return (
     <Link
       href="#"
-      key={props.data.title}
+      key={props.data.id}
       className="group flex h-fit snap-center flex-col gap-3 rounded-2xl bg-gray-900/80 px-4 pb-2 pt-4 transition-all hover:bg-gray-900"
     >
       <div className="relative flex flex-col items-end gap-1">
         <Image
-          className="h-[160px] w-[280px] min-w-[280px] rounded-xl object-cover brightness-90 transition-all group-hover:brightness-50"
+          className="h-[160px] w-[280px] min-w-[280px] rounded-xl object-cover brightness-90 transition-all group-hover:brightness-50 lg:size-auto lg:h-[160px] lg:min-w-full"
           src={props.data.image}
           alt={props.data.title}
           width={260}

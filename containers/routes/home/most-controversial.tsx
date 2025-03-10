@@ -12,9 +12,9 @@ export function MostControversial() {
         <p className="text-lg font-bold">پربحث ترین ها</p>
       </div>
       {/* body */}
-      <div className=" flex snap-x gap-4 overflow-x-auto scrollbar-hide lg:snap-none lg:justify-between">
-        {mostControversialData.map((item: any) => (
-          <Card data={item} key={item.title} />
+      <div className=" flex snap-x gap-4 overflow-x-auto scrollbar-hide lg:grid lg:snap-none lg:grid-cols-6 lg:justify-between">
+        {mostControversialData.map((item) => (
+          <Card data={item} key={item.id} />
         ))}
       </div>
     </section>
@@ -29,7 +29,7 @@ const Card = (props: ICardProps) => {
   return (
     <Link
       href={props.data.href}
-      key={props.data.title}
+      key={props.data.id}
       className="flex h-fit snap-center flex-col gap-3 rounded-2xl bg-gray-900/80 px-4 pb-2 pt-4 transition-all hover:bg-gray-900"
     >
       <Image

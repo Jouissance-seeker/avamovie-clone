@@ -1,4 +1,5 @@
 type THeroSliderData = {
+  id: number;
   title: string;
   imdbRate: number;
   description: string;
@@ -7,6 +8,7 @@ type THeroSliderData = {
 
 export const HeroSliderData: THeroSliderData = [
   {
+    id: 1,
     title: 'Reacher',
     imdbRate: 8.1,
     description:
@@ -14,6 +16,7 @@ export const HeroSliderData: THeroSliderData = [
     href: 'https://avamovie.shop/wp-content/uploads/2024/01/61f5af4b75b57-1024x576.jpg',
   },
   {
+    id: 2,
     title: 'Severance',
     imdbRate: 8.8,
     description:
@@ -21,6 +24,7 @@ export const HeroSliderData: THeroSliderData = [
     href: 'https://avamovie.shop/wp-content/uploads/2024/01/1655477531640705187.ZARFILM-1024x576.jpg',
   },
   {
+    id: 3,
     title: 'A Complete Unknown',
     imdbRate: 7.5,
     description:
@@ -28,6 +32,7 @@ export const HeroSliderData: THeroSliderData = [
     href: 'https://avamovie.shop/wp-content/uploads/2025/02/d418mX1gl2TdpLBUMX6wWHzvD26-1024x576.jpg',
   },
   {
+    id: 4,
     title: 'Captain America: Brave New World',
     imdbRate: 6.2,
     description:
@@ -35,6 +40,7 @@ export const HeroSliderData: THeroSliderData = [
     href: 'https://avamovie.shop/wp-content/uploads/2025/02/l9dOxb5UazNLg8IDNB0GA7oDud3-1024x576.jpg',
   },
   {
+    id: 5,
     title: 'Daredevil: Born Again',
     imdbRate: 9.1,
     description:
@@ -42,10 +48,19 @@ export const HeroSliderData: THeroSliderData = [
     href: 'https://avamovie.shop/wp-content/uploads/2025/03/Daredevil.Born_.Again_.AvaMovie-1024x576.jpg',
   },
   {
+    id: 6,
     title: 'The Gorge',
     imdbRate: 6.8,
     description:
       'به دو تک تیرانداز، ماموریتی محول می‌شود. محافظت از دو طرف یک دره عمیق و غیرقابل نفوذ، بدون اینکه بدانند واقعا در اعماق آن چه چیزی نهفته است.',
     href: 'https://avamovie.shop/wp-content/uploads/2025/02/uBfAZuAsEmIQ66N2OTZ8ytLEV6-1024x576.jpg',
+  },
+  {
+    id: 7,
+    title: 'Black in Action',
+    imdbRate: 5.9,
+    description:
+      'داستان دو جاسوس سابق سیا یعنی مت و امیلی که پس از آشکار شدن هویت‌ شان، دوباره به عملیات برمی‌گردند.',
+    href: 'https://avamovie.shop/wp-content/uploads/2025/02/l9dOxb5UazNLg8IDNB0GA7oDud3-1024x576.jpg',
   },
 ];

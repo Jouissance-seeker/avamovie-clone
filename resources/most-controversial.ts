@@ -1,11 +1,11 @@
-type TMostVisitedData = {
+type TMostConversialData = {
   title: string;
   image: string;
   href: string;
   year: number;
 }[];
 
-export const MostVisitedData: TMostVisitedData = [
+export const mostControversialData: TMostConversialData = [
   {
     title: 'Solo Leveling',
     image: 'https://avamovie.shop/cdn/230x400/2024/01/Solo-Leveling.jpg',

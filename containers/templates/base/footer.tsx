@@ -78,7 +78,7 @@ const MobileMenu = () => {
     <section>
       <div
         className={cn(
-          'fixed top-0 left-0 w-full h-full bg-black/10 z-10 backdrop-blur-sm transition-all duration-300',
+          'fixed top-0 left-0 w-full h-full bg-black/10 z-20 backdrop-blur-sm transition-all duration-300',
           {
             'opacity-100': toggleUrlState.isShow,
             'opacity-0 pointer-events-none': !toggleUrlState.isShow,
@@ -189,7 +189,9 @@ const MobileMenuCategories = () => {
         </button>
       </div>
       {/* body */}
-      <div className={cn(collapseList[0].isCollapsed ? 'block' : 'hidden')}>
+      <div
+        className={cn(collapseList[0].isCollapsed ? 'block' : 'hidden', 'px-1')}
+      >
         {/* sections */}
         <div>
           {/* head */}

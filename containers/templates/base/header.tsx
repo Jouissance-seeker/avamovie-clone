@@ -48,7 +48,7 @@ export function Header() {
         </div>
       </div>
       <div className="flex items-center gap-4">
-        <Search />
+        <SearchNormal />
         <Link
           href="#"
           className="flex h-11 items-center justify-center gap-2 rounded-xl bg-gray-800/50 px-2 backdrop-blur-sm transition-all hover:bg-gray-900"
@@ -68,8 +68,8 @@ export function Header() {
   );
 }
 
-const Search = () => {
-  const toggleUrlState = useToggleUrlState('search');
+const SearchNormal = () => {
+  const toggleUrlState = useToggleUrlState('search-normal');
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const [searchValue, setSearchValue] = useState('');
   const router = useRouter();
@@ -96,8 +96,8 @@ const Search = () => {
         className={cn(
           'absolute flex gap-1 -bottom-5 backdrop-blur-sm left-0 z-10 h-11 bg-gray-800/50 rounded-xl p-2',
           {
-            'bottom-0 hidden': !toggleUrlState.isShow,
-            '-bottom-5 w-60': toggleUrlState.isShow,
+            'bottom-0 left-7 w-0 opacity-0 invisible': !toggleUrlState.isShow,
+            '-bottom-5 w-60 opacity-100 visible': toggleUrlState.isShow,
           },
         )}
       >

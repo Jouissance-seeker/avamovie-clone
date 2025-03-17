@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { mostNewestData } from '@/resources/most-newest';
 import { cn } from '@/utils/cn';
+import { mostVisitedData } from '@/resources/most-visited';
 
 export function MostVisited() {
   return (
@@ -21,8 +22,8 @@ export function MostVisited() {
         </Link>
       </div>
       {/* body */}
-      <div className=" flex snap-x gap-4 overflow-x-auto scrollbar-hide lg:grid lg:snap-none lg:grid-cols-4 lg:justify-between">
-        {mostNewestData.map((item) => (
+      <div className=" flex snap-x gap-4 overflow-x-auto scrollbar-hide lg:grid lg:snap-none lg:grid-cols-5 lg:justify-between">
+        {mostVisitedData.map((item) => (
           <Card data={item} key={item.id} />
         ))}
       </div>
@@ -31,7 +32,7 @@ export function MostVisited() {
 }
 
 interface ICardProps {
-  data: (typeof mostNewestData)[0];
+  data: (typeof mostVisitedData)[0];
 }
 
 const Card = (props: ICardProps) => {
@@ -43,17 +44,18 @@ const Card = (props: ICardProps) => {
     >
       <div className="relative flex flex-col items-end gap-1">
         <Image
-          className="h-[160px] w-[280px] min-w-[280px] rounded-xl object-cover brightness-90 transition-all group-hover:brightness-50 lg:size-auto lg:h-[160px] lg:min-w-full"
+          className="h-[250px] w-[180px] min-w-[180px] rounded-xl object-cover brightness-90 transition-all group-hover:brightness-50 lg:size-auto lg:h-[275px] lg:min-w-full"
           src={props.data.image}
           alt={props.data.title}
           width={260}
-          height={160}
+          height={250}
         />
+        <p className='mt-3 text-gray-400 text-sm'>({props.data.year})</p>
         <p className="mt-2 line-clamp-1 text-smp font-medium text-white/90">
           {props.data.title}
         </p>
         <div className="pointer-events-none absolute top-[45px] flex w-full items-center opacity-0 transition-all group-hover:opacity-100">
-          <p className="absolute flex h-full w-[260px] px-3 text-xs font-medium text-white/90">
+          <p className="absolute flex h-full px-3 text-xs font-medium text-white/90">
             {props.data.description}
           </p>
         </div>
@@ -83,7 +85,7 @@ const Card = (props: ICardProps) => {
             />
           </div>
         </div>
-        <div className="absolute right-1.5 top-1.5 flex gap-1.5">
+        <div className="absolute left-1.5 top-1.5 flex gap-1.5">
           <div
             className={cn(
               'size-[24px] rounded-full flex justify-center items-center bg-gray-800/80',

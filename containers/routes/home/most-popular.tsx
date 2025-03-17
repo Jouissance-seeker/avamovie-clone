@@ -53,7 +53,7 @@ const Card = (props: ICardProps) => {
           {props.data.title}
         </p>
         <div className="pointer-events-none absolute top-[45px] flex w-full items-center opacity-0 transition-all group-hover:opacity-100">
-          <p className="absolute flex h-full w-[260px] px-3 text-xs font-medium text-white/90">
+          <p className="absolute flex h-full px-3 text-xs font-medium text-white/90">
             {props.data.description}
           </p>
         </div>

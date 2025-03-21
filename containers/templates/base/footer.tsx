@@ -27,29 +27,10 @@ const DesktopFooter = () => {
   return (
     <div className="container">
       <div className="flex justify-between border-t border-t-gray-600 px-2 py-4">
-        <div className="flex items-center gap-2">
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          >
-            <ArrowSquareUp size={26} color="#fff" />
-          </button>
-          <p className="text-sm text-gray-400">
-            طراحی و توسعه توسط حمید شاهسونی
-          </p>
-        </div>
-        <div>
-          <ul className="flex gap-4 text-sm text-gray-400">
-            <li className="transition-all hover:text-white">
-              <Link href="/">هنرمندان</Link>
-            </li>
-            <li className="transition-all hover:text-white">
-              <Link href="/">فیلم ها</Link>
-            </li>
-            <li className="transition-all hover:text-white">
-              <Link href="/">سریال ها</Link>
-            </li>
-          </ul>
-        </div>
+        <p className="text-sm text-gray-400">طراحی و توسعه توسط حمید شاهسونی</p>
+        <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          <ArrowSquareUp size={26} color="#fff" />
+        </button>
       </div>
     </div>
   );

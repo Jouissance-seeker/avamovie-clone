@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: 'آوا مووی',
   description: 'طراحی و توسعه توسط حمید شاهسونی',
 };
+
 const fontIranYekan = localFont({
   src: [
     {

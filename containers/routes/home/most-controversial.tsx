@@ -12,7 +12,7 @@ export function MostControversial() {
         <p className="text-lg font-bold">پربحث ترین ها</p>
       </div>
       {/* body */}
-      <div className=" flex snap-x gap-4 overflow-x-auto scrollbar-hide lg:grid lg:snap-none lg:grid-cols-6 lg:justify-between">
+      <div className=" flex snap-x gap-4 overflow-x-auto lg:grid lg:snap-none lg:grid-cols-6 lg:justify-between">
         {mostControversialData.map((item) => (
           <Card data={item} key={item.id} />
         ))}

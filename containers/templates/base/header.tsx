@@ -13,7 +13,7 @@ export function Header() {
   return (
     <header className="container absolute left-1/2 top-0 z-20 my-6 flex -translate-x-1/2 items-center justify-between">
       <div className="flex items-center gap-4">
-        <Link href="#">
+        <Link href="/">
           <Image src="/images/logo.png" width={150} height={150} alt="لوگو" />
         </Link>
         <div className="hidden items-center gap-4 border-r border-gray-400 pr-3 lg:flex">
@@ -28,19 +28,19 @@ export function Header() {
             <DesktopCategories />
           </div>
           <Link
-            href="#"
+            href="/"
             className="text-smp text-white/70 transition-all hover:text-white"
           >
             هنرمندان
           </Link>
           <Link
-            href="#"
+            href="/"
             className="text-smp text-white/70 transition-all hover:text-white"
           >
             فیلم ها
           </Link>
           <Link
-            href="#"
+            href="/"
             className="text-smp text-white/70 transition-all hover:text-white"
           >
             سریال ها
@@ -50,7 +50,7 @@ export function Header() {
       <div className="flex items-center gap-4">
         <SearchNormal />
         <Link
-          href="#"
+          href="/"
           className="flex h-11 items-center justify-center gap-2 rounded-xl bg-gray-800/50 px-2 backdrop-blur-sm transition-all hover:bg-gray-900"
         >
           <Crown size={28} color="#F5C518" variant="Bold" />
@@ -58,7 +58,7 @@ export function Header() {
           <p className="hidden text-sm lg:block">خرید اشتراک</p>
         </Link>
         <Link
-          href="#"
+          href="/"
           className="hidden h-11 items-center justify-center rounded-xl bg-pink px-6 transition-all hover:bg-pink/90 lg:flex"
         >
           ورود
@@ -211,7 +211,7 @@ const DesktopCategories = () => {
               ?.data.map((item) => (
                 <Link
                   key={item.text}
-                  href="#"
+                  href="/"
                   className="relative flex text-xsp transition-all hover:text-pink"
                 >
                   {item.text}

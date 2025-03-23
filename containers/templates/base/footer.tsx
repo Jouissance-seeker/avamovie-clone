@@ -110,7 +110,7 @@ const MobileMenu = () => {
           },
         )}
       >
-        <Link href="#">
+        <Link href="/">
           <Image
             src="/images/logo.png"
             alt="logo"
@@ -124,13 +124,13 @@ const MobileMenu = () => {
           <MobileMenuCategories />
           {/* links */}
           <div className="flex flex-col gap-3">
-            <Link href="#" className="flex rounded-lg bg-black p-3.5 text-xsp">
+            <Link href="/" className="flex rounded-lg bg-black p-3.5 text-xsp">
               فیلم ها
             </Link>
-            <Link href="#" className="flex rounded-lg bg-black p-3.5 text-xsp">
+            <Link href="/" className="flex rounded-lg bg-black p-3.5 text-xsp">
               سریال ها
             </Link>
-            <Link href="#" className="flex rounded-lg bg-black p-3.5 text-xsp">
+            <Link href="/" className="flex rounded-lg bg-black p-3.5 text-xsp">
               هنرمندان
             </Link>
           </div>
@@ -235,7 +235,7 @@ const MobileMenuCategories = () => {
             ].map((item) => (
               <Link
                 key={item.text}
-                href="#"
+                href="/"
                 className="relative flex rounded-lg bg-black py-2 pr-4 text-xsp transition-all after:absolute after:right-1.5 after:top-1.5 after:h-5 after:w-0.5 after:bg-pink hover:text-pink"
               >
                 {item.text}
@@ -271,7 +271,7 @@ const MobileMenuCategories = () => {
             ].map((item) => (
               <Link
                 key={item.text}
-                href="#"
+                href="/"
                 className="relative flex rounded-lg bg-black py-2 pr-4 text-xsp transition-all after:absolute after:right-1.5 after:top-1.5 after:h-5 after:w-0.5 after:bg-pink hover:text-pink"
               >
                 {item.text}
@@ -307,7 +307,7 @@ const MobileMenuCategories = () => {
             ].map((item) => (
               <Link
                 key={item.text}
-                href="#"
+                href="/"
                 className="relative flex rounded-lg bg-black py-2 pr-4 text-xsp transition-all after:absolute after:right-1.5 after:top-1.5 after:h-5 after:w-0.5 after:bg-pink hover:text-pink"
               >
                 {item.text}

@@ -1,9 +1,8 @@
 import { Eye, Microphone2, Subtitle } from 'iconsax-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { mostNewestData } from '@/resources/most-newest';
-import { cn } from '@/utils/cn';
 import { mostVisitedData } from '@/resources/most-visited';
+import { cn } from '@/utils/cn';
 
 export function MostVisited() {
   return (
@@ -22,7 +21,7 @@ export function MostVisited() {
         </Link>
       </div>
       {/* body */}
-      <div className=" flex snap-x gap-4 overflow-x-auto scrollbar-hide lg:grid lg:snap-none lg:grid-cols-5 lg:justify-between">
+      <div className="flex snap-x gap-4 overflow-x-auto lg:grid lg:snap-none lg:grid-cols-5 lg:justify-between">
         {mostVisitedData.map((item) => (
           <Card data={item} key={item.id} />
         ))}
@@ -38,7 +37,7 @@ interface ICardProps {
 const Card = (props: ICardProps) => {
   return (
     <Link
-      href="#"
+      href="/"
       key={props.data.id}
       className="group flex h-fit snap-center flex-col gap-3 rounded-2xl bg-gray-900/80 px-4 pb-2 pt-4 transition-all hover:bg-gray-900"
     >
@@ -50,7 +49,7 @@ const Card = (props: ICardProps) => {
           width={260}
           height={250}
         />
-        <p className='mt-3 text-gray-400 text-sm'>({props.data.year})</p>
+        <p className="mt-3 text-sm text-gray-400">({props.data.year})</p>
         <p className="mt-2 line-clamp-1 text-smp font-medium text-white/90">
           {props.data.title}
         </p>

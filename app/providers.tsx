@@ -9,28 +9,18 @@ interface IProps {
   children: ReactNode;
 }
 
-const ProgressBar = () => {
-  return (
-    <AppProgressBar
-      height="4px"
-      color="#FF5990"
-      options={{ showSpinner: false }}
-      shallowRouting
-    />
-  );
-};
-
-const Nuqs = (props: IProps) => {
-  return <NuqsAdapter>{props.children}</NuqsAdapter>;
-};
-
 export default function Providers(props: IProps) {
   return (
     <>
-      <ProgressBar />
-      <Nuqs>
+      <AppProgressBar
+        height="4px"
+        color="#FF5990"
+        options={{ showSpinner: false }}
+        shallowRouting
+      />
+      <NuqsAdapter>
         <Suspense>{props.children}</Suspense>
-      </Nuqs>
+      </NuqsAdapter>
     </>
   );
 }

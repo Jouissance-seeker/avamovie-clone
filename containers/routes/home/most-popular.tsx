@@ -21,7 +21,7 @@ export function MostPopular() {
         </Link>
       </div>
       {/* body */}
-      <div className=" flex snap-x gap-4 overflow-x-auto scrollbar-hide lg:grid lg:snap-none lg:grid-cols-4 lg:justify-between">
+      <div className="flex snap-x gap-4 overflow-x-auto lg:grid lg:snap-none lg:grid-cols-4 lg:justify-between">
         {mostNewestData.map((item) => (
           <Card data={item} key={item.id} />
         ))}
@@ -37,7 +37,7 @@ interface ICardProps {
 const Card = (props: ICardProps) => {
   return (
     <Link
-      href="#"
+      href="/"
       key={props.data.id}
       className="group flex h-fit snap-center flex-col gap-3 rounded-2xl bg-gray-900/80 px-4 pb-2 pt-4 transition-all hover:bg-gray-900"
     >

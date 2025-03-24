@@ -10,6 +10,8 @@ import { useToggleUrlState } from '@/hooks/toggle-url-state';
 import { cn } from '@/utils/cn';
 
 export function Header() {
+  const toggleUrlState = useToggleUrlState('desktop-categories');
+
   return (
     <header className="container absolute left-1/2 top-0 z-20 my-6 flex -translate-x-1/2 items-center justify-between">
       <div className="flex items-center gap-4">
@@ -18,13 +20,13 @@ export function Header() {
         </Link>
         <div className="hidden items-center gap-4 border-r border-gray-400 pr-3 lg:flex">
           <div className="relative">
-            <Link
-              href="/?toggle-desktop-categories=true"
+            <button
+              onClick={() => toggleUrlState.show()}
               className="flex items-center gap-2 stroke-white/70 text-smp text-white/70 transition-all hover:stroke-white hover:text-white"
             >
               <Category size={20} />
               <span>دسته بندی ها</span>
-            </Link>
+            </button>
             <DesktopCategories />
           </div>
           <Link

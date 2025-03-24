@@ -8,6 +8,7 @@ import {
 } from 'iconsax-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { RefObject, useRef, useState } from 'react';
 import { useOnClickOutside, useScrollLock } from 'usehooks-ts';
 import { useToggleUrlState } from '@/hooks/toggle-url-state';
@@ -38,6 +39,8 @@ const DesktopFooter = () => {
 
 const MobileNavBottom = () => {
   const lockScrollbar = useScrollLock();
+  const toggleUrlState = useToggleUrlState('mobile-menu');
+  const pathname = usePathname();
 
   return (
     <section className="fixed bottom-0 z-20 flex w-full justify-around bg-black/80 px-7 py-3 backdrop-blur-sm lg:hidden">
@@ -48,8 +51,9 @@ const MobileNavBottom = () => {
           text: 'خانه',
         },
         {
-          href: '/?toggle-mobile-menu=true',
+          href: pathname,
           onClick: () => {
+            toggleUrlState.show();
             lockScrollbar.lock();
           },
           icon: Category,

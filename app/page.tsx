@@ -3,7 +3,7 @@ import { MostControversial } from '@/containers/routes/home/most-controversial';
 import { MostPopular } from '@/containers/routes/home/most-popular';
 import { MostVisited } from '@/containers/routes/home/most-visited';
 
-export default function Home() {
+export default function Page() {
   return (
     <div className="flex size-full flex-col gap-6">
       <HeroSlider />

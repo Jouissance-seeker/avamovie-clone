@@ -10,7 +10,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { RefObject, useRef, useState } from 'react';
-import { useOnClickOutside, useScrollLock } from 'usehooks-ts';
+import { useOnClickOutside } from 'usehooks-ts';
 import { useToggleUrlState } from '@/hooks/toggle-url-state';
 import { cn } from '@/utils/cn';
 
@@ -38,7 +38,6 @@ const DesktopFooter = () => {
 };
 
 const MobileNavBottom = () => {
-  const lockScrollbar = useScrollLock();
   const toggleUrlState = useToggleUrlState('mobile-menu');
   const pathname = usePathname();
 
@@ -54,7 +53,7 @@ const MobileNavBottom = () => {
           href: pathname,
           onClick: () => {
             toggleUrlState.show();
-            lockScrollbar.lock();
+            document.body.classList.add('overflow-hidden');
           },
           icon: Category,
           text: 'منو',
@@ -87,10 +86,10 @@ const MobileNavBottom = () => {
 const MobileMenu = () => {
   const toggleUrlState = useToggleUrlState('mobile-menu');
   const sectionRef = useRef<HTMLDivElement | null>(null);
-  const lockScrollbar = useScrollLock();
+
   useOnClickOutside(sectionRef as RefObject<HTMLElement>, () => {
     toggleUrlState.hide();
-    lockScrollbar.unlock();
+    document.body.classList.remove('overflow-hidden');
   });
 
   return (

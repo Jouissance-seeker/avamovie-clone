@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* minimal scrollbar */
 html {
   overflow-y: auto;
   overflow-x: hidden;

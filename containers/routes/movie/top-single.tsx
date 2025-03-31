@@ -7,7 +7,7 @@ import { cn } from '@/utils/cn';
 export function TopSingle() {
   const data = singleMovieData;
   return (
-    <section className="relative flex flex-col items-center gap-4 py-24 lg:flex-row lg:py-32">
+    <section className="relative flex flex-col items-center gap-4 pt-24 lg:flex-row lg:pb-12 lg:pt-32">
       <div>
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-70"

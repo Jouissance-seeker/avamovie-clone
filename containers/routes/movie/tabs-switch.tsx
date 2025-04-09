@@ -34,7 +34,13 @@ export function TabsSwitch() {
               })}
               variant="Bulk"
             />
-            <span className="text-sm text-white/70">{item.label}</span>
+            <span
+              className={cn('text-sm text-white/70', {
+                'text-white': activedTab === item.id,
+              })}
+            >
+              {item.label}
+            </span>
           </button>
         ))}
       </div>

@@ -19,7 +19,7 @@ export const mostVisitedData: TMostVisitedData = [
     isSubtitle: true,
     imdbRate: 7.1,
     avamovieRate: 6.2,
-    href: '/',
+    href: '/movie/simple',
     image:
       'https://avamovie.shop/cdn/230x400/2025/04/MV5BOWFjMGIwNDgtODE5MS00ZWVkLTlhNzgtMDI1ZDM1OWMyYzY4XkEyXkFqcGc@._V1_SX500.jpg',
     description:
@@ -33,7 +33,7 @@ export const mostVisitedData: TMostVisitedData = [
     isSubtitle: true,
     imdbRate: 6.6,
     avamovieRate: 4.3,
-    href: '/',
+    href: '/movie/simple',
     image:
       'https://avamovie.shop/cdn/230x400/2025/04/MV5BNWQ4ZjQ1MDQtMDBiMS00OGEwLTk3OWQtMWNjY2MyZmJjOGM0XkEyXkFqcGc@._V1_SX500.jpg',
     description:
@@ -48,7 +48,7 @@ export const mostVisitedData: TMostVisitedData = [
     isSubtitle: true,
     imdbRate: 7.7,
     avamovieRate: 8.8,
-    href: '/',
+    href: '/movie/simple',
     image:
       'https://avamovie.shop/cdn/230x400/2025/03/MV5BYmQxZGIxNTYtYTQwMy00ODdkLWI0MmQtM2E0ZmIyNmYzMGMzXkEyXkFqcGc@._V1_SX500.jpg',
     description:
@@ -62,7 +62,7 @@ export const mostVisitedData: TMostVisitedData = [
     isSubtitle: true,
     imdbRate: 7.1,
     avamovieRate: 6.8,
-    href: '/',
+    href: '/movie/simple',
     image:
       'https://avamovie.shop/cdn/230x400/2025/04/MV5BYTlhYzMyZWMtNzg0Yy00ZmVjLTllNDItYTE5MThlMjg1NTlkXkEyXkFqcGc@._V1_SX500.jpg',
     description:
@@ -76,7 +76,7 @@ export const mostVisitedData: TMostVisitedData = [
     isSubtitle: true,
     imdbRate: 6.4,
     avamovieRate: 5.8,
-    href: '/',
+    href: '/movie/simple',
     image:
       'https://avamovie.shop/cdn/230x400/2025/04/MV5BMjcyZDkyNjYtY2MxMi00MTVmLWE2YjgtZGMwMWE1OTFjMDYxXkEyXkFqcGc@._V1_SX500.jpg',
     description:
@@ -90,7 +90,7 @@ export const mostVisitedData: TMostVisitedData = [
     isSubtitle: true,
     imdbRate: 4.9,
     avamovieRate: 6.8,
-    href: '/',
+    href: '/movie/simple',
     image:
       'https://avamovie.shop/cdn/230x400/2025/03/MV5BOWYxYjEyYTUtY2FkZC00Y2QwLTk1ZjMtMTAyMTAyMzQ3MDZiXkEyXkFqcGc@._V1_SX500.jpg',
     description:
@@ -104,7 +104,7 @@ export const mostVisitedData: TMostVisitedData = [
     isSubtitle: true,
     imdbRate: 6.6,
     avamovieRate: 5.0,
-    href: '/',
+    href: '/movie/simple',
     image:
       'https://avamovie.shop/cdn/230x400/2025/04/MV5BMmVlZWE4OWQtOGUyYS00MGFiLThhMjMtYTJlOWZkNGUwMDZhXkEyXkFqcGc@._V1_SX500.jpg',
     description:
@@ -118,7 +118,7 @@ export const mostVisitedData: TMostVisitedData = [
     isSubtitle: true,
     imdbRate: 7.1,
     avamovieRate: 6.2,
-    href: '/',
+    href: '/movie/simple',
     image:
       'https://avamovie.shop/cdn/230x400/2024/11/MV5BNmU4NDEzMWUtN2M5YS00NTVlLWFjMzItNDAwZjQzMDI4NzlkXkEyXkFqcGc@._V1_SX500.jpg',
     description:
@@ -132,7 +132,7 @@ export const mostVisitedData: TMostVisitedData = [
     isSubtitle: true,
     imdbRate: 8.3,
     avamovieRate: 9.2,
-    href: '/',
+    href: '/movie/simple',
     image:
       'https://avamovie.shop/cdn/230x400/2025/03/MV5BMjNhNzUyMTQtYTFiZS00NzM2LWI3YTgtZmI1ZTA1MDUzMzBhXkEyXkFqcGc@._V1_SX500.jpg',
     description:
@@ -146,7 +146,7 @@ export const mostVisitedData: TMostVisitedData = [
     isSubtitle: true,
     imdbRate: 7.1,
     avamovieRate: 6.2,
-    href: '/',
+    href: '/movie/simple',
     image:
       'https://avamovie.shop/cdn/230x400/2025/04/MV5BMTI1NjIzMzg5OF5BMl5BanBnXkFtZTcwMjI2ODcyMQ@@._V1_SX500.jpg',
     description:

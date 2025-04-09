@@ -37,7 +37,7 @@ interface ICardProps {
 const Card = (props: ICardProps) => {
   return (
     <Link
-      href="/"
+      href={props.data.href}
       key={props.data.id}
       className="group flex h-fit snap-center flex-col gap-3 rounded-2xl bg-gray-900/80 px-4 pb-2 pt-4 transition-all hover:bg-gray-900"
     >
@@ -61,7 +61,7 @@ const Card = (props: ICardProps) => {
         <div className="flex gap-3">
           <div className="flex items-center gap-1.5 text-sm">
             <span className="pt-1 text-gray-300">
-              <span className="font-medium">{props.data.imdbRate}</span>
+              <span className="font-medium">{props.data.avamovieRate}</span>
               <span>/10</span>
             </span>
             <Image

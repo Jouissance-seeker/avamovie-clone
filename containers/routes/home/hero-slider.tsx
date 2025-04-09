@@ -28,7 +28,7 @@ export function HeroSlider() {
     <section
       className="relative z-10 col-span-full flex h-[500px] flex-col justify-end overflow-hidden bg-cover bg-center lg:h-[600px]"
       style={{
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${activedIndexData.href})`,
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${activedIndexData.image})`,
       }}
     >
       {/* movie detail */}
@@ -91,7 +91,7 @@ export function HeroSlider() {
                 )}
               >
                 <Image
-                  src={item.href}
+                  src={item.image}
                   alt={item.title}
                   width={180}
                   height={100}

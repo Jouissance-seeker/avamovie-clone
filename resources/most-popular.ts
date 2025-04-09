@@ -18,7 +18,7 @@ export const mostPopularData: TMostPopularData = [
     isSubtitle: true,
     imdbRate: 8.3,
     avamovieRate: 9.2,
-    href: 'https://avamovie.shop/series/1923/',
+    href: '/movie/simple',
     image:
       'https://avamovie.shop/cdn/325x200/2024/01/1671366588926156272.ZARFILM.jpg',
     description:
@@ -31,7 +31,7 @@ export const mostPopularData: TMostPopularData = [
     isSubtitle: true,
     imdbRate: 6.5,
     avamovieRate: 6.5,
-    href: '/',
+    href: '/movie/simple',
     image:
       'https://avamovie.shop/cdn/325x200/2025/03/Nine.Bodies.in_.A.Mexican.Morgue.AvaMovie-scaled.jpg',
     description:
@@ -44,7 +44,7 @@ export const mostPopularData: TMostPopularData = [
     isSubtitle: true,
     imdbRate: 7.7,
     avamovieRate: 8.8,
-    href: '/',
+    href: '/movie/simple',
     image:
       'https://avamovie.shop/cdn/325x200/2024/01/46227442910a295494dff5dbcfe43c65c0b305c56b7e593335626d32cdc19b77._RI_TTW_-e1691695583521.jpg',
     description:
@@ -57,7 +57,7 @@ export const mostPopularData: TMostPopularData = [
     isSubtitle: true,
     imdbRate: 8.7,
     avamovieRate: 9.1,
-    href: '/',
+    href: '/movie/simple',
     image:
       'https://avamovie.shop/cdn/325x200/2025/03/Daredevil.Born_.Again_.AvaMovie-scaled.jpg',
     description:
@@ -70,7 +70,7 @@ export const mostPopularData: TMostPopularData = [
     isSubtitle: true,
     imdbRate: 8.3,
     avamovieRate: 8.6,
-    href: '/',
+    href: '/movie/simple',
     image:
       'https://avamovie.shop/cdn/325x200/2024/01/sokTOq0zAmPS7wCR4qd4Kca35x7-scaled-1.jpg',
     description:
@@ -83,7 +83,7 @@ export const mostPopularData: TMostPopularData = [
     isSubtitle: true,
     imdbRate: 6.5,
     avamovieRate: 8.3,
-    href: '/',
+    href: '/movie/simple',
     image:
       'https://avamovie.shop/cdn/325x200/2025/01/The.Hunting.Party_.AvaMovie-scaled.jpg',
     description:
@@ -96,7 +96,7 @@ export const mostPopularData: TMostPopularData = [
     isSubtitle: true,
     imdbRate: 8.1,
     avamovieRate: 9.5,
-    href: '/',
+    href: '/movie/simple',
     image:
       'https://avamovie.shop/cdn/325x200/2024/01/16554710481929798613.ZARFILM.jpg',
     description:
@@ -109,7 +109,7 @@ export const mostPopularData: TMostPopularData = [
     isSubtitle: true,
     imdbRate: 5.5,
     avamovieRate: 7.7,
-    href: '/',
+    href: '/movie/simple',
     image:
       'https://avamovie.shop/cdn/325x200/2025/02/Suits.LA_.AvaMovie-scaled.jpg',
     description:

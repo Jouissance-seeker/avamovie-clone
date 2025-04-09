@@ -1,7 +1,7 @@
 import { Clock, Microphone2, Subtitle } from 'iconsax-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { mostNewestData } from '@/resources/most-newest';
+import { mostPopularData } from '@/resources/most-popular';
 import { cn } from '@/utils/cn';
 
 export function MostPopular() {
@@ -22,7 +22,7 @@ export function MostPopular() {
       </div>
       {/* body */}
       <div className="flex snap-x gap-4 overflow-x-auto lg:grid lg:snap-none lg:grid-cols-4 lg:justify-between">
-        {mostNewestData.map((item) => (
+        {mostPopularData.map((item) => (
           <Card data={item} key={item.id} />
         ))}
       </div>
@@ -31,7 +31,7 @@ export function MostPopular() {
 }
 
 interface ICardProps {
-  data: (typeof mostNewestData)[0];
+  data: (typeof mostPopularData)[0];
 }
 
 const Card = (props: ICardProps) => {

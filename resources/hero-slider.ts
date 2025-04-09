@@ -57,19 +57,19 @@ export const HeroSliderData: THeroSliderData = [
   },
   {
     id: 7,
-    title: 'Black in Action',
+    title: 'Mickey 17',
     imdbRate: 5.9,
     description:
-      'داستان دو جاسوس سابق سیا یعنی مت و امیلی که پس از آشکار شدن هویت‌ شان، دوباره به عملیات برمی‌گردند.',
-    href: 'https://avamovie.shop/wp-content/uploads/2025/02/l9dOxb5UazNLg8IDNB0GA7oDud3-1024x576.jpg',
+      'داستان یک کارمند بی مصرف که در صدد کشف استعدادهای خود، سعی در نجات شرکت از رکود اقتصادی را دارد.',
+    href: 'https://avamovie.shop/wp-content/uploads/2025/03/pC38NUALErFOJWbsNDU1vzBz47O-1024x576.jpg',
   },
   {
     id: 8,
-    title: 'Captain America: Brave New World',
+    title: 'MobLand',
     imdbRate: 6.2,
     description:
-      'سم ویلسون، کاپیتان آمریکای جدید، پس از ملاقات با تادئوس راس، رئیس جمهور تازه منتخب ایالات متحده، خود را درگیر یک توطئه بین‌المللی می‌بیند. حال او باید قبل از اینکه مغز متفکر واقعی تمام جهان را نابود کند...',
-    href: 'https://avamovie.shop/wp-content/uploads/2025/02/l9dOxb5UazNLg8IDNB0GA7oDud3-1024x576.jpg',
+      'هری دا سوزا، مردی زیرک، میان دو خانواده جنایتکار هریگن و استیونسون در لندن گرفتار می شود. پس از شبی پر از هرج و مرج و خشونت، او باید تعادل را حفظ کند یا جنگی بزرگ را شعله‌ور سازد. در این میان، رازها و وفاداری‌ها پیچیدگی داستان را بیشتر می کند.',
+    href: 'https://avamovie.shop/wp-content/uploads/2025/03/MobLand.AvaMovie-1024x576.jpg',
   },
   {
     id: 9,
@@ -78,5 +78,13 @@ export const HeroSliderData: THeroSliderData = [
     description:
       'مت ماردوک با شروع به ظهور هویت گذشته آنها ، خود را در یک دوره برخورد با ویلسون فیسک می یابد.',
     href: 'https://avamovie.shop/wp-content/uploads/2025/03/Daredevil.Born_.Again_.AvaMovie-1024x576.jpg',
+  },
+  {
+    id: 10,
+    title: 'The Bondsman',
+    imdbRate: 7.3,
+    description:
+      'داستان یک جایزه بگیر که به او فرصتی دوباره برای زندگی داده می‌شود و حالا سعی دارد تا اشتباهات گذشته را جبران کند و به زندگی عشقی و موسیقایی‌اش توجه بیشتری کند تا...',
+    href: 'https://avamovie.shop/wp-content/uploads/2025/03/MobLand.AvaMovie-1024x576.jpg',
   },
 ];

@@ -10,8 +10,6 @@ import { useToggleUrlState } from '@/hooks/toggle-url-state';
 import { cn } from '@/utils/cn';
 
 export function Header() {
-  const toggleUrlState = useToggleUrlState('desktop-categories');
-
   return (
     <header className="container absolute left-1/2 top-0 z-20 my-6 flex -translate-x-1/2 items-center justify-between">
       <div className="flex items-center gap-4">
@@ -19,14 +17,11 @@ export function Header() {
           <Image src="/images/logo.png" width={150} height={150} alt="لوگو" />
         </Link>
         <div className="hidden items-center gap-4 border-r border-gray-400 pr-3 lg:flex">
-          <div className="relative">
-            <button
-              onClick={() => toggleUrlState.show()}
-              className="flex items-center gap-2 stroke-white/70 text-smp text-white/70 transition-all hover:stroke-white hover:text-white"
-            >
+          <div className="group relative">
+            <p className="flex cursor-pointer items-center gap-2 stroke-white/70 text-smp text-white/70 transition-all group-hover:stroke-white group-hover:text-white">
               <Category size={20} />
               <span>دسته بندی ها</span>
-            </button>
+            </p>
             <DesktopCategories />
           </div>
           <Link
@@ -136,11 +131,7 @@ const SearchNormal = () => {
 };
 
 const DesktopCategories = () => {
-  const toggleUrlState = useToggleUrlState('desktop-categories');
   const sectionRef = useRef<HTMLDivElement | null>(null);
-  useOnClickOutside(sectionRef as RefObject<HTMLElement>, () => {
-    toggleUrlState.hide();
-  });
   const [activedTab, setActivedTab] = useState<
     'sections' | 'movie-genres' | 'serial-genres'
   >('sections');
@@ -174,13 +165,7 @@ const DesktopCategories = () => {
   return (
     <section
       ref={sectionRef}
-      className={cn(
-        'absolute right-0 z-20 top-10 hidden lg:flex transition-all duration-300',
-        {
-          'opacity-100 visible': toggleUrlState.isShow,
-          'opacity-0 invisible': !toggleUrlState.isShow,
-        },
-      )}
+      className="invisible absolute right-0 top-10 z-20 hidden opacity-0 transition-all duration-300 group-hover:visible group-hover:opacity-100 lg:flex"
     >
       <div className="h-full w-[500px] rounded-2xl bg-gray-900 p-5">
         {/* head */}

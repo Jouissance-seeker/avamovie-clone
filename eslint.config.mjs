@@ -7,7 +7,6 @@ import reactPlugin from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import prettier from 'eslint-plugin-prettier';
-import betterTailwind from 'eslint-plugin-better-tailwindcss';
 import globals from 'globals';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -56,9 +55,6 @@ export default [
           project: './tsconfig.json',
         },
       },
-      'better-tailwindcss': {
-        entryPoint: 'app/globals.css',
-      },
     },
     plugins: {
       '@typescript-eslint': tsPlugin,
@@ -68,21 +64,11 @@ export default [
       'react-hooks': reactHooks,
       'jsx-a11y': jsxA11y,
       prettier,
-      'better-tailwindcss': betterTailwind,
       'unused-imports': unusedImports,
       '@next': nextPlugin,
     },
     rules: {
-      // Tailwind
-      'better-tailwindcss/no-unnecessary-whitespace': 'warn',
-      'better-tailwindcss/no-duplicate-classes': 'warn',
-      'better-tailwindcss/enforce-consistent-variable-syntax': 'warn',
-      'better-tailwindcss/no-unregistered-classes': [
-        'error',
-        {
-          ignore: ['^_'],
-        },
-      ],
+      // Tailwind (plugin removed due to Tailwind v4 incompatibility)
 
       // Unused Variables and Imports
       'no-unused-vars': 'off',

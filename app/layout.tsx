@@ -1,10 +1,10 @@
 import './globals.css';
+import Providers from './providers';
+import TemplateBase from '@/containers/templates/base';
+import { cn } from '@/utils/cn';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import { ReactNode } from 'react';
-import TemplateBase from '@/containers/templates/base';
-import { cn } from '@/utils/cn';
-import Providers from './providers';
 
 export const metadata: Metadata = {
   title: 'آوا مووی',
@@ -39,7 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html dir="rtl" lang="fa">
-      <body className={cn('flex flex-col h-dvh', fontIranYekan.className)}>
+      <body className={cn('flex h-dvh flex-col', fontIranYekan.className)}>
         <Providers>
           <TemplateBase>{children}</TemplateBase>
         </Providers>

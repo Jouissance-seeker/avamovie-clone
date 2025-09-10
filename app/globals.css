@@ -1,28 +1,40 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-html {
-  overflow-y: auto;
-  overflow-x: hidden;
-  &::-webkit-scrollbar {
-    width: 7px;
-    height: 8px;
-  }
-  &::-webkit-scrollbar-track {
-    background: #0a1411;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: #555;
-    border-radius: 10px;
-  }
-  &::-webkit-scrollbar-thumb:hover {
-    background: #666;
-  }
+@theme {
+  --color-pink: #dd3268;
+  --font-size-smp: 15px;
+  --font-size-xsp: 13px;
+  --transition-duration: 300ms;
 }
 
 @layer base {
+  html {
+    overflow-y: auto;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+      width: 7px;
+      height: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #0a1411;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #555;
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: #666;
+    }
+  }
+
   body {
     @apply bg-black text-white;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto px-4;
+    max-width: 1280px;
   }
 }
